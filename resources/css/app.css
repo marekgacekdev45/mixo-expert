@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-display: "Montserrat", sans-serif;
+
+    --breakpoint-xxs: 350px;
+    --breakpoint-xs: 390px;
+    --breakpoint-max: 2200px;
+
+    --color-primary-200: #ffffff;
+    --color-primary-400: #f7f7f7;
+    --color-primary-600: #efefef;
+    --color-primary-700: #e8e8e8;
+    --color-primary-800: #bababa;
+
+    --color-secondary-400: #d6c78e;
+    --color-secondary-600: #9b9165;
+
+    --color-fontDark: #333333;
+    --color-fontLight: #ffffff;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth scroll-pt-16;
+    }
+
+    body {
+        @apply font-normal  tracking-wide  font-display bg-primary-600 overflow-x-hidden;
+    }
+
+	figure{
+		@apply flex justify-center
+	}
+}
+
+@layer utilities {
+    .wrapper {
+        @apply max-w-screen-2xl mx-auto px-6 md:px-20 lg:px-6;
+    }
+
+    .preheading {
+        @apply text-sm uppercase font-bold tracking-widest;
+    }
+
+    .heading {
+        @apply uppercase  text-[25px]  sm:text-[42px] font-black text-black  tracking-wider leading-[3rem];
+    }
+
+    .text {
+        @apply leading-relaxed md:text-lg;
+    }
+
+    .link-hover--group {
+        @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-secondary-400 after:w-full after:scale-x-0 after:group-hover:scale-x-100 after:transition after:duration-300 after:origin-left;
+    }
+
+    .link-active {
+        @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-secondary-400 after:w-full;
+    }
+
+    .topbar_link {
+        @apply flex justify-center items-center gap-2   px-4;
+    }
+    .topbar__link-text {
+        @apply text-xs;
+    }
+    .topbar_link-icon {
+        @apply size-5  group-hover:scale-110 duration-300 text-secondary-600;
+    }
+
+    .link-hover {
+        @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-secondary-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left;
+    }
+    .prose-content {
+        @apply prose  prose-headings:font-light prose-h2:text-4xl  prose-h2:md:text-5xl  prose-headings:mt-0 prose-headings:mb-8  max-w-full text-lg;
+    }
+
+    .gallery-btn {
+        @apply bg-secondary-600;
+    }
+}

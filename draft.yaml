@@ -1,0 +1,24 @@
+models:
+  RealisationsPage:
+    meta_title: json
+    meta_description: json
+    hero_image: text
+    hero_heading: json
+    subheading: json nullable
+    heading: json nullable
+    text: json nullable
+  Realisation:
+    title: json
+    thumbnail: text
+    description: text nullable
+    gallery: text
+  ContactPage:
+    meta_title: json
+    meta_description: json
+    hero_image: text
+    hero_heading: json
+    heading: json nullable
+    text: json nullable
+
+  
+

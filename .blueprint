@@ -1,0 +1,21 @@
+created:
+    - database/factories/RealisationsPageFactory.php
+    - database/factories/RealisationFactory.php
+    - database/factories/ContactPageFactory.php
+    - database/migrations/2025_03_10_163803_create_realisations_pages_table.php
+    - database/migrations/2025_03_10_163804_create_realisations_table.php
+    - database/migrations/2025_03_10_163805_create_contact_pages_table.php
+    - app/Models/RealisationsPage.php
+    - app/Models/Realisation.php
+    - app/Models/ContactPage.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
+    Home: { meta_title: json, meta_description: json, og_image: text, keywords: json, scripts_head_top: 'text nullable', scripts_head_bottom: 'text nullable', scripts_body_top: 'text nullable', name: json, logo: text, address: string, city: string, phone: string, email: string, nip: 'string nullable', google_map: 'text nullable', google_link: 'text nullable', hero_heading: 'json nullable', hero_text: 'json nullable', hero_image: 'text nullable', hero_background: 'text nullable', offer_subheading: 'json nullable', offer_heading: 'json nullable', offer_text: 'json nullable', about_subheading: 'json nullable', about_heading: 'json nullable', about_text: 'json nullable', about_image: 'text nullable', about_background: 'text nullable', realisations_subheading: 'json nullable', realisations_heading: 'json nullable', realisations_text: 'json nullable', realisations_image: 'text nullable', realisations_background: 'text nullable', cooperation_subheading: 'json nullable', cooperation_heading: 'json nullable', cooperation_text: 'json nullable', relationships: { hasMany: Social } }
+    Social: { name: string, link: string, relationships: { belongsTo: Home } }
+    Offer: { title: json, icon: 'text nullable', short_description: json, thumbnail: text, content: json, sort: 'integer nullable' }
+    GalleryPage: { meta_title: json, meta_descsription: json, hero_image: text, hero_heading: json }
+    Gallery: { category: json, images: text, sort: 'integer nullable' }
+    PrivacyPolicyPage: { meta_title: json, meta_descsription: json, hero_image: text, hero_heading: json, content: json }
+    RealisationsPage: { meta_title: json, meta_description: json, hero_image: text, hero_heading: json, subheading: 'json nullable', heading: 'json nullable', text: 'json nullable' }
+    Realisation: { title: json, thumbnail: text, description: 'text nullable', gallery: text }
+    ContactPage: { meta_title: json, meta_description: json, hero_image: text, hero_heading: json, heading: 'json nullable', text: 'json nullable' }
