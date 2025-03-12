@@ -1,7 +1,7 @@
 <ul class='flex gap-6'>
-    <x-header.desktop.nav-item  href="{{route('home') .'#o-nas'}}" title='O nas' />
+    <x-header.desktop.nav-item  href="{{ route('home') . '#' . __('global.anchor.about') }}" title="{{__('global.menu.about')}}" />
 
-    <x-header.desktop.nav-item  href="{{route('home') .'#oferta'}}" dropdown title="Oferta">
+    <x-header.desktop.nav-item  href="{{ route('home') . '#' . __('global.anchor.offer') }}" dropdown title="{{__('global.menu.offer')}}">
         <x-header.desktop.dropdown>
 
             @foreach ($offers as $room )
@@ -12,9 +12,11 @@
         </x-header.desktop.dropdown>
     </x-header.desktop.nav-item>
 
-    <x-header.desktop.nav-item  href="{{route('realisations.index')}}" title='Realizacje' />
-    <x-header.desktop.nav-item  href="{{route('gallery') }}" title='Galeria' />
+    <x-header.desktop.nav-item  href="{{route('realisations.index')}}" title="{{__('global.menu.realisations')}}" />
+    <x-header.desktop.nav-item  href="{{route('gallery') }}" title="{{__('global.menu.gallery')}}" />
 
   
 
 </ul>
+
+

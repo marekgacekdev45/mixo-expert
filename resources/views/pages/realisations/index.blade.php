@@ -1,5 +1,5 @@
 <x-layouts.app title="{!!$content->meta_title!!}" description="{!!$content->meta_description!!}"
-    ogImage="{{$content->hero_image}}">
+   >
 
     <x-hero img="{{$content->hero_image}}" heading="{{$content->hero_heading}}" />
 

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('realisations', function (Blueprint $table) {
             $table->id();
-            $table->json('title');
+            $table->json('title')->unique();
+            $table->json('slug')->unique();
             $table->text('thumbnail');
             $table->text('description')->nullable();
             $table->text('gallery');

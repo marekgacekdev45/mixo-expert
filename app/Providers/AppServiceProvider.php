@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $home = Home::first(['name', 'logo', 'address', 'city', 'phone', 'email', 'google_link', 'google_map', 'keywords', 'og_image', 'scripts_head_top', 'scripts_head_bottom', 'scripts_body_top','hero_background']);
+        $home = Home::first(['name', 'logo', 'address', 'city', 'phone', 'email', 'google_link', 'google_map', 'keywords', 'og_image', 'scripts_head_top', 'scripts_head_bottom', 'scripts_body_top','hero_background','nip']);
         $socials = Social::all();
         $offers = Offer::select('title', 'slug')->get();
 

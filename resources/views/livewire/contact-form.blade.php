@@ -36,33 +36,31 @@
         <div class="">
 
             <div class="flex flex-col justify-between h-full">
-                <x-contact.form-field-input name="surface" label="Powierzchnia w m²" type="text" />
-                <x-contact.form-field-input name="size" label="Grubość w cm" type="text" />
+                <x-contact.form-field-input name="surface" label="{{__('global.contact_form.surface')}}" type="text" />
+                <x-contact.form-field-input name="size" label="{{__('global.contact_form.size')}}" type="text" />
 
-                <x-contact.form-field-input name="address" label="Lokalizacja" type="text" />
-                <x-contact.form-field-input name="phone" label="Numer telefonu" type="tel" />
-                <x-contact.form-field-input name="email" label="Adres email" type="email" />
+                <x-contact.form-field-input name="address" label="{{__('global.contact_form.address')}}" type="text" />
+                <x-contact.form-field-input name="phone" label="{{__('global.contact_form.phone')}}" type="tel" />
+                <x-contact.form-field-input name="email" label="{{__('global.contact_form.email')}}" type="email" />
 
-                <x-contact.form-field-textarea name="content" label="Wiadomość" />
+                <x-contact.form-field-textarea name="content" label="{{__('global.contact_form.content')}}" />
 
-                <p class="text-black text-xs mb-1">Podane informacje będą wykorzystane jedynie do wstępnej wyceny
-                    naszych usług.</p>
-                <p class="text-black text-xs mb-6"> Ostateczna cena
-                    zostanie podana na miejscu, po dokładnym pomiarze i ocenie wymagań klienta.</p>
+                <p class="text-black text-xs mb-1">{{__('global.contact_form.text_1')}}</p>
+                <p class="text-black text-xs mb-6">{{__('global.contact_form.text_2')}}</p>
 
             </div>
 
 
-            <div class="flex justify-start lg:justify-end lg:col-span-2">
+            <div class="flex justify-start ">
 
 
                 <button  active data-sitekey="{{ env('CAPTCHA_SITE_KEY') }}" data-callback='handle'
                     data-action='submit' type="submit" wire.loading.attr="disabled" type='submit' aria-label="Wyślij"
-                    class=' px-8 py-2.5 overflow-hidden relative group cursor-pointer border-2 font-semibold border-secondary-400 text-white bg-secondary-400 uppercase '>
+                    class=' px-8 py-2.5 overflow-hidden relative group cursor-pointer border-2 font-semibold border-secondary-600 text-white bg-secondary-600 uppercase '>
 
                     <span
                         class='absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-white top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease'></span>
-                    <span class='relative text-white transition duration-300 group-hover:text-secondary-400 ease'><svg
+                    <span class='relative text-white transition duration-300 group-hover:text-secondary-600 ease'><svg
                             wire:loading wire:target="submitForm" class="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
                             xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">
                             <circle class="opacity-40" cx="12" cy="12" r="10" stroke="#000000" stroke-width="4">
@@ -70,7 +68,7 @@
                             <path class="opacity-75" fill="#fff"
                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
                             </path>
-                        </svg>{{__('global.contact.send')}}</span>
+                        </svg>{{__('global.contact_form.submit')}}</span>
                 </button>
 
             </div>

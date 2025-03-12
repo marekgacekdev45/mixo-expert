@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
 class RealisationsPage extends Model
-{    use HasTranslations;
+{
+    use HasTranslations;
 
     use HasFactory;
 

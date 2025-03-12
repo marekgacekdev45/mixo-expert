@@ -8,7 +8,7 @@
         </div>
 
         <div class='flex justify-center mt-12'>
-            <x-link-btn href="{{route('contact')}}" label="kontakt"/>
+            <x-link-btn href="{{route('contact')}}" label="{{__('global.button.contact')}}"/>
         </div>
     </div>
 </section>

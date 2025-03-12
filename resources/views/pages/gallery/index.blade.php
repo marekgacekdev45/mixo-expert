@@ -1,4 +1,4 @@
-<x-layouts.app title="{!!$content->meta_title!!}" description="{!!$content->meta_description!!}" ogImage="{{$content->hero_image}}">
+<x-layouts.app title="{!!$content->meta_title!!}" description="{!!$content->meta_description!!}" >
 
     <x-hero img="{{$content->hero_image}}" heading="{{$content->hero_heading}}" />  
 
@@ -12,7 +12,7 @@
                 <button
                     class="   px-8 py-3 uppercase text-xs duration-300 bg-secondary-400   text-fontLight cursor-pointer   gallery-btn filter-btn"
                     data-title="">
-                    Wszystkie
+                    {{__('global.button.all')}}
                 </button>
 
                 {{-- Buttons to filter by title --}}
@@ -34,7 +34,7 @@
                     <a href="{{asset('storage/' .  $img)}}" class="glightbox">
 
                         <img src="{{asset('storage/' .  $img)}}"
-                            alt="{{$home->title}}" loading="lazy"
+                            alt="{{$home->title}} - {{ $image->category }}" loading="lazy"
                             class="w-full object-cover aspect-square">
                     </a>
 

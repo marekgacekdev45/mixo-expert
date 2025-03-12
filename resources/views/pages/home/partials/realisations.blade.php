@@ -9,7 +9,7 @@
                 </div>
            
 
-                <x-link-btn href="{{route('realisations.index')}}" label="Realizacje"/>
+                <x-link-btn href="{{route('realisations.index')}}" label="{{__('global.button.realisations')}}"/>
             </div>
 
             <div class='relative max-w-[550px] h-[350px] sm:h-[500px] max-h-[650px] mx-4 sm:mx-auto lg:mx-8  lg:h-[600px] '>
@@ -18,7 +18,7 @@
                 </div>
                 <img
                 src={{asset('storage/' . $home->realisations_image)}}
-                    alt='wyposażenie dla gastronomii w sklepie Bentto'
+                    alt="{!!$home->realisations_heading!!}"
                   
                     class='h-full relative z-10 object-cover'
                 />

@@ -67,6 +67,14 @@ class ContactPageResource extends Resource
 
                             
 
+                        ]),
+
+                        Tabs\Tab::make('Treść')
+                        ->icon('heroicon-o-pencil')
+                        ->columns()
+                        ->schema([
+
+                            
                             Forms\Components\TextInput::make('heading')
                                 ->label('Nagłowek')
                              
@@ -90,9 +98,8 @@ class ContactPageResource extends Resource
                                 ])
                                
                                 ->columnSpanFull(),
+
                         ]),
-
-
 
                     Tabs\Tab::make('Meta')
                         ->icon('heroicon-o-globe-alt')

@@ -36,7 +36,7 @@ class GalleryPage extends Model
         'hero_heading' => 'array',
     ];
 
-    public $translatable = [
+    protected $translatable = [
         'meta_title',
         'meta_description',
         'hero_heading'

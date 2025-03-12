@@ -65,37 +65,42 @@ class RealisationsPageResource extends Resource
                                     ->required()
                                     ->columnSpanFull(),
 
-                                Forms\Components\TextInput::make('subheading')
-                                    ->label('Mniejszy nagłowek')
-                                   
-                                    ->columnSpanFull(),
-
-                                Forms\Components\TextInput::make('heading')
-                                    ->label('Nagłowek')
-                                 
-                                    ->columnSpanFull(),
-
-                                Forms\Components\RichEditor::make('text')
-                                    ->label('Tekst')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'bulletList',
-                                        'codeBlock',
-                                        'h2',
-                                        'h3',
-                                        'italic',
-                                        'link',
-                                        'orderedList',
-                                        'redo',
-                                        'strike',
-                                        'underline',
-                                        'undo',
-                                    ])
-                                   
-                                    ->columnSpanFull(),
+                              
                             ]),
 
+                            Tabs\Tab::make('Treść')
+                            ->icon('heroicon-o-pencil')
+                            ->columns()
+                            ->schema([
+                                Forms\Components\TextInput::make('subheading')
+                                ->label('Mniejszy nagłowek')
+                               
+                                ->columnSpanFull(),
 
+                            Forms\Components\TextInput::make('heading')
+                                ->label('Nagłowek')
+                             
+                                ->columnSpanFull(),
+
+                            Forms\Components\RichEditor::make('text')
+                                ->label('Tekst')
+                                ->toolbarButtons([
+                                    'bold',
+                                    'bulletList',
+                                    'codeBlock',
+                                    'h2',
+                                    'h3',
+                                    'italic',
+                                    'link',
+                                    'orderedList',
+                                    'redo',
+                                    'strike',
+                                    'underline',
+                                    'undo',
+                                ])
+                               
+                                ->columnSpanFull(),
+                            ]),
 
                         Tabs\Tab::make('Meta')
                             ->icon('heroicon-o-globe-alt')

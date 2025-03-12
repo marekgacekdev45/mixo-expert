@@ -1,4 +1,4 @@
-<section id='oferta' class='pb-12'>
+<section id="{{__('global.anchor.offer')}}" class='pb-12'>
 
 
     <div class='wrapper pt-6 md:pt-12'>
@@ -14,12 +14,12 @@
 
             @foreach ($offers as $offer)
             <a href="{{route('offers.show',$offer->slug)}}" 
-                class='border border-primary-700 shadow-lg px-4 xl:px-8 py-8 2xl:aspect-square flex flex-col justify-center items-center text-center gap-4 m-4 hover:-translate-y-3 duration-300'>
+                class='border border-black bg-black shadow-lg px-4 xl:px-8 py-8 2xl:aspect-square flex flex-col justify-center items-center text-center gap-4 m-4 hover:-translate-y-3 duration-300 text-white'>
                 @if($offer->icon)
                 <img src="{{asset('storage/' . $offer->icon)}}" alt="" class='size-16 text-secondary-400 pb-3 object-cover' />,
                 @endif
-                <h3 class='text-lg font-black text-black uppercase'>{!!$offer->title!!}</h3>
-                <p>{!!$offer->short_desc!!}</p>
+                <h3 class='text-lg font-black  uppercase'>{!!$offer->title!!}</h3>
+                <p >{!!$offer->short_description!!}</p>
             </a>
             @endforeach
 

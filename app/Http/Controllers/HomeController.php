@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
 
         $home = Home::firstOrFail();
-        $offers =  Offer::orderBy('sort', 'asc')->select('slug', 'title', 'icon', 'short_desc',)->get();
+        $offers =  Offer::orderBy('sort', 'asc')->select('slug', 'title', 'icon', 'short_description',)->get();
 
         return view('pages.home.index', compact('home','offers'));
     }

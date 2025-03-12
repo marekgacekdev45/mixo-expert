@@ -1,6 +1,6 @@
 <div class='fixed top-0 inset-x-0  bg-primary-200 shadow-lg z-50 navbar--js duration-500'>
     <div class='flex max-w-screen-max mx-auto '>
-        <a href='/' class=' flex justify-center items-center px-4 pl-4 lg:w-[20%] 2xl:w-[15%] bg-primary-400 '>
+        <a href='{{route('home')}}' class=' flex justify-center items-center px-4 pl-4 lg:w-[20%] 2xl:w-[15%] bg-primary-400 '>
             <img src='{{asset('storage/' . $home->logo)}}' alt='{{$home->name}} - {{$home->address}}, {{$home->city}}'
             class="w-[100px]" />
         </a>
@@ -48,7 +48,7 @@
                     <x-header.desktop.links />
                 </nav>
                 
-                <x-link-btn href="{{route('contact')}}" label="kontakt" class='hidden lg:inline-flex '/>
+                <x-link-btn href="{{route('contact')}}" label="{{__('global.menu.contact')}}" class='hidden lg:inline-flex '/>
 
                 <x-header.mobile.hamburger class="lg:hidden" />
 

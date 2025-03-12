@@ -42,7 +42,7 @@ class Realisation extends Model
         'title',
         'slug',
         'description',
-        'sort',
+       
     ];
 
 

@@ -44,7 +44,6 @@ class Offer extends Model
         'slug',
         'short_description',
         'content',
-        'sort',
     ];
 
 

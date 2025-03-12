@@ -1,6 +1,6 @@
-const footerYearSpan = document.querySelector('.footerYear--js')
+ const footerYearSpan = document.querySelector('.footerYear--js')
 
-const currentYear = new Date().getFullYear()
+ const currentYear = new Date().getFullYear()
 
 
 footerYearSpan.innerHTML = currentYear

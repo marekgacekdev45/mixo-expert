@@ -13,7 +13,7 @@
 
             
             <a href='/' class=' flex justify-center items-center px-4 pl-4 lg:w-[20%] 2xl:w-[10%] bg-primary-400 '>
-                <img src='{{asset('assets/logo.png')}}' alt='Bentto - Urządzenia Gastronomiczne' class="w-[75px] p-2" />
+                <img src='{{asset('assets/logo.png')}}' alt='{{$home->name}} - {{$home->address}}, {{$home->city}}' class="w-[75px] p-2" />
             </a>
 
             {{-- bottom --}}
@@ -22,7 +22,7 @@
                  <x-header.desktop.links/>
                 </nav>
                
-                <x-link-btn href="{{route('contact')}}" label="kontakt" class='hidden lg:inline-flex '/>
+                <x-link-btn href="{{route('contact')}}" label="{{__('global.menu.contact')}}" class='hidden lg:inline-flex '/>
 
                 <x-header.mobile.hamburger class="lg:hidden" />
 

@@ -64,7 +64,7 @@ class ContactForm extends Component
                 ->subject('Nowa wiadomość ze strony ');
         });
 
-        $this->successMessage =  __('global.contact.success-message');
+        $this->successMessage =  __('global.contact_form.success_message');
 
         $this->resetForm();
 
