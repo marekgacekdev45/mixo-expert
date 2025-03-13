@@ -19,16 +19,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
   Route::get('/', HomeController::class,)->name('home');
 
-  Route::get('/oferta/{slug}', [OffersController::class, 'show'])->name('offers.show');
+  Route::get(LaravelLocalization::transRoute('routes.offer_index'), [OffersController::class, 'show'])->name('offers.show');
 
-  Route::get('/realizacje', [RealisationsController::class, 'index'])->name('realisations.index');
-  Route::get('/realizacje/{slug}', [RealisationsController::class, 'show'])->name('realisations.show');
-  
-  Route::get('/kontakt', [ContactController::class, 'index'])->name('contact');
-  Route::get('/galeria', [GalleryController::class, 'index'])->name('gallery');
+  Route::get(LaravelLocalization::transRoute('routes.realisations_index'), [RealisationsController::class, 'index'])->name('realisations.index');
+  Route::get(LaravelLocalization::transRoute('routes.realisations_show'), [RealisationsController::class, 'show'])->name('realisations.show');
+
+  Route::get(LaravelLocalization::transRoute('routes.contact'), [ContactController::class, 'index'])->name('contact');
+  Route::get(LaravelLocalization::transRoute('routes.gallery'), [GalleryController::class, 'index'])->name('gallery');
 
 
-  Route::get('/polityka-prywatnosci', PrivacyPolicyController::class,)->name('privacyPolicy');
+  Route::get(LaravelLocalization::transRoute('routes.privacy_policy'), PrivacyPolicyController::class,)->name('privacyPolicy');
 
 
   // REDIRECT

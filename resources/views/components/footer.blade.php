@@ -18,33 +18,33 @@
                         <h2 class='text-2xl font-bold  mb-4 text-secondary-600'>Menu</h2>
                         <ul class='flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3'>
                             <li>
-                                <a href="{{ route('home') . '#' . __('global.anchor.about') }}" class='link-hover font-medium'>
+                                <a href="{{ route('home') . '#' . __('global.anchor.about') }}" class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.about')}}
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('home') . '#' . __('global.anchor.offer') }}" class='link-hover font-medium'>
+                                <a href="{{ route('home') . '#' . __('global.anchor.offer') }}" class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.offer')}}
                                 </a>
                             </li>
                           
                             <li>
-                                <a href='{{route('realisations.index')}}' class='link-hover font-medium'>
+                                <a href='{{route('realisations.index')}}' class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.realisations')}}
                                 </a>
                             </li>
                             <li>
-                                <a href='{{route('gallery')}}' class='link-hover font-medium'>
+                                <a href='{{route('gallery')}}' class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.gallery')}}
                                 </a>
                             </li>
                             <li>
-                                <a href='{{route('contact')}}' class='link-hover font-medium'>
+                                <a href='{{route('contact')}}' class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.contact')}}
                                 </a>
                             </li>
                             <li>
-                                <a href='{{ route('privacyPolicy') }}' class='link-hover font-medium'>
+                                <a href='{{ route('privacyPolicy') }}' class='link-hover font-medium hover:text-secondary-600 duration-300'>
                                     {{__('global.menu.privacy_policy')}}
                                 </a>
                             </li>

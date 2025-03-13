@@ -32,7 +32,7 @@
             @endif
             
             <div class="border-l pl-2 flex justify-center items-center gap-2 pt-0.5">
-                <a href="tel:{{$home->phone}}" class="group" aria-label="telefon">
+                <a href="tel:+48{{$home->phone}}" class="group" aria-label="telefon">
                     <x-lucide-phone class="w-5 stroke-1 text-white group-hover:scale-105 duration-300" />
                 </a>
                 <a href="mailto:{{$home->email}}" class="group" aria-label="telefon">
